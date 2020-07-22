@@ -59,7 +59,7 @@ public class Player : MonoBehaviour
         float v = Input.GetAxis("Vertical");
         float h = Input.GetAxis("Horizontal");
 
-        rig.AddForce(cam.forward * v * speed + cam.forward * h * speed);
+        rig.AddForce(cam.forward * v * speed + cam.right * h * speed);
 
         float x = Input.GetAxis("Mouse X");
         cam.Rotate(0, x * turn, 0);
